@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vh; /* Ocupa 80% da altura da tela */
+  min-height: 100vh; /* Ocupa 80% da altura da tela */
   text-align: center;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -17,23 +17,58 @@
   position: relative;
   z-index: 1;
   max-width: 800px;
+  text-align: center;
+}
+
+.nameContainer {
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do nome completo */
+}
+
+.introText {
+  font-size: 1.5rem; /* Tamanho menor */
+  font-weight: bold;
+  color: var(--text-color); /* Branco, para diferenciar do gradiente */
+  text-transform: uppercase; /* Deixa em maiúsculas, para dar estilo */
+  letter-spacing: 2px; /* Espaçamento entre as letras */
+  margin-bottom: -0.5rem; /* Margem negativa para aproximar do nome principal */
+  text-align: center; /* Centraliza o texto */
 }
 
 .name {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
-  /* Efeito de gradiente no texto */
-  background: linear-gradient(90deg, var(--primary-color), #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 5rem;
+  margin: 0;
+  color: var(--primary-color); /* <-- A mágica acontece aqui! */
 }
 
-.title {
+/* NOVOS ESTILOS PARA A ANIMAÇÃO */
+.typeAnimationContainer {
   font-size: 2rem;
   color: var(--text-color);
   margin-bottom: 1rem;
+  font-weight: bold;
+  height: 3rem; /* Manter altura fixa é bom */
+  display: flex; /* <-- Adicione display flex aqui para alinhar 'Sou:' e a animação */
+  justify-content: center; /* Manter centralizado por enquanto */
+  align-items: center; /* Alinhar verticalmente */
 }
+
+.typeAnimationContainer span {
+  /* Aplica ao 'Sou: ' */
+  display: inline-block; /* Garante que 'Sou:' ocupe seu próprio espaço fixo */
+  margin-right: 0.5rem; /* Espaçamento entre 'Sou:' e o texto animado */
+}
+
+.animatedText {
+  color: var(--color-base);
+  display: inline-block; /* Garante que o texto animado se alinhe em linha */
+  text-align: left; /* Garante que o texto animado comece sempre da esquerda */
+}
+
+/*.title {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem; 
+} */
 
 .subtitle {
   font-size: 1.2rem;

@@ -1,52 +1,70 @@
-/* src/components/Header.module.css */
+/* src/components/Header.module.css (Versão Final e Corrigida) */
 
 .header {
-  background-color: #1a1a1a;
-  color: white;
-  padding: 1rem 5%; /* 1rem de altura, 5% de margem nas laterais */
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  background-color: var(--background-color);
+  padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.nav {
-  display: flex; /* Coloca os filhos (logo e lista) um ao lado do outro */
-  justify-content: space-between; /* Empurra o logo para um lado e a lista para o outro */
-  align-items: center; /* Alinha tudo verticalmente ao centro */
-  width: 100%;
+/* O 'cérebro' do nosso layout: controla o alinhamento principal */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .logo {
-  display: flex; /* Para alinhar os spans lado a lado */
-  align-items: center;
-  font-family: var(
-    --font-logo
-  ); /* Aplica a fonte Poppins (ou a que você escolheu) */
-  font-size: 1.5rem;
-  font-weight: 700; /* Peso da fonte que selecionamos */
+  display: flex;
+  align-items: baseline;
   text-decoration: none;
 }
 
 .logoK {
-  color: var(--primary-color); /* Laranja! */
+  color: var(--primary-color);
+  font-family: var(--font-logo-initial); /* (ou a variável que você definiu) */
+  font-size: 2rem;
 }
 
 .logoSantos {
-  color: var(--text-color); /* Branco! */
-  margin-left: 2px; /* Um pequeno ajuste de espaçamento */
+  color: var(--text-color);
+  font-family: var(--font-logo-name); /* (ou a variável que você definiu) */
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-left: 4px;
+  text-transform: uppercase;
 }
 
+/* Agora, .nav é apenas um 'container' simples para a lista, sem estilos de layout */
+.nav {
+  /* Nenhum estilo específico necessário aqui por enquanto */
+}
+
+/* Este 'flex' alinha os itens do menu (Sobre, Projetos, etc.) um ao lado do outro */
 .navList {
-  list-style: none; /* Remove as bolinhas da lista */
-  display: flex; /* Coloca os itens da lista um ao lado do outro */
-  gap: 2rem; /* Adiciona um espaço de 2rem entre cada item */
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0; /* Remove margens padrão da lista */
+  padding: 0; /* Remove paddings padrão da lista */
 }
 
 .navList a {
-  color: white;
-  text-decoration: none; /* Remove o sublinhado dos links */
+  color: var(--text-color);
+  text-decoration: none;
   font-size: 1.1rem;
-  transition: color 0.3s ease; /* Efeito suave na mudança de cor */
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .navList a:hover {
-  color: var(--primary-color); /* Usando a variável */
+  color: var(--primary-color);
 }

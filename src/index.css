@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #ff8c00; /* Um tom de laranja vibrante */
+  --color-base: #fda942;
   --background-color: #1a1a1a;
   --text-color: #f0f0f0;
   --container-color: #242424;
