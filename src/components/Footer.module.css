@@ -1,0 +1,26 @@
+/* src/components/Footer.module.css */
+
+.footer {
+  padding: 2rem 5%;
+  background-color: #111; /* Um preto um pouco mais escuro para diferenciar */
+  color: #a0a0a0;
+  text-align: center;
+}
+
+.socialIcons {
+  margin-bottom: 1rem;
+}
+
+.socialIcons a {
+  color: #a0a0a0;
+  margin: 0 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: var(--primary-color);
+}
+
+.footer p {
+  font-size: 0.9rem;
+}

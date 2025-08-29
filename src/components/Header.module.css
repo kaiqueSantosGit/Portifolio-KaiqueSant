@@ -1,0 +1,52 @@
+/* src/components/Header.module.css */
+
+.header {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem 5%; /* 1rem de altura, 5% de margem nas laterais */
+  width: 100%;
+}
+
+.nav {
+  display: flex; /* Coloca os filhos (logo e lista) um ao lado do outro */
+  justify-content: space-between; /* Empurra o logo para um lado e a lista para o outro */
+  align-items: center; /* Alinha tudo verticalmente ao centro */
+  width: 100%;
+}
+
+.logo {
+  display: flex; /* Para alinhar os spans lado a lado */
+  align-items: center;
+  font-family: var(
+    --font-logo
+  ); /* Aplica a fonte Poppins (ou a que você escolheu) */
+  font-size: 1.5rem;
+  font-weight: 700; /* Peso da fonte que selecionamos */
+  text-decoration: none;
+}
+
+.logoK {
+  color: var(--primary-color); /* Laranja! */
+}
+
+.logoSantos {
+  color: var(--text-color); /* Branco! */
+  margin-left: 2px; /* Um pequeno ajuste de espaçamento */
+}
+
+.navList {
+  list-style: none; /* Remove as bolinhas da lista */
+  display: flex; /* Coloca os itens da lista um ao lado do outro */
+  gap: 2rem; /* Adiciona um espaço de 2rem entre cada item */
+}
+
+.navList a {
+  color: white;
+  text-decoration: none; /* Remove o sublinhado dos links */
+  font-size: 1.1rem;
+  transition: color 0.3s ease; /* Efeito suave na mudança de cor */
+}
+
+.navList a:hover {
+  color: var(--primary-color); /* Usando a variável */
+}

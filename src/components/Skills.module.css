@@ -1,0 +1,42 @@
+/* src/components/Skills.module.css */
+
+.skills {
+  padding: 4rem 5%;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.skillsGrid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  /* Cria um grid responsivo: tenta encaixar colunas de 120px. 
+     Se não couber, ele quebra a linha automaticamente. */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skillItem p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.skillItem:hover {
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+  color: var(--primary-color);
+}

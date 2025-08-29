@@ -1,0 +1,63 @@
+/* src/components/Contact.module.css */
+
+.contact {
+  padding: 4rem 5%;
+  background-color: var(--container-color);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.contact p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  color: #a0a0a0;
+}
+
+.form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: inherit; /* Garante que a fonte seja a mesma do site */
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.submitButton {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #ff7b00; /* Um laranja um pouco mais escuro no hover */
+  transform: translateY(-3px);
+}

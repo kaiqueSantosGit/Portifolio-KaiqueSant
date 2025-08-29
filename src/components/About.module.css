@@ -1,0 +1,47 @@
+/* src/components/About.module.css */
+
+.about {
+  padding: 4rem 5%;
+  background-color: var(
+    --container-color
+  ); /* Uma cor de fundo um pouco diferente */
+  color: var(--text-color);
+}
+
+.aboutContent {
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o container */
+  display: flex; /* A mágica do layout de duas colunas começa aqui! */
+  align-items: center; /* Alinha os itens verticalmente */
+  gap: 3rem; /* Espaço entre a imagem e o texto */
+}
+
+.imageContainer {
+  flex: 1; /* A imagem vai ocupar uma parte do espaço */
+  display: flex;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; /* Deixa a imagem redonda */
+  object-fit: cover; /* Garante que a imagem não fique distorcida */
+  border: 4px solid var(--primary-color);
+}
+
+.textContainer {
+  flex: 2; /* O texto vai ocupar duas partes do espaço (mais largo que a imagem) */
+}
+
+.textContainer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.textContainer p {
+  font-size: 1.1rem;
+  line-height: 1.6; /* Melhora a legibilidade do texto */
+  margin-bottom: 1rem;
+}

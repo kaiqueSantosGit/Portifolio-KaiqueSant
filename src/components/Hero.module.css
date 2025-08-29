@@ -1,0 +1,79 @@
+/* src/components/Hero.module.css */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; /* Ocupa 80% da altura da tela */
+  text-align: center;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 0 2rem;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.name {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  /* Efeito de gradiente no texto */
+  background: linear-gradient(90deg, var(--primary-color), #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #a0a0a0; /* Um cinza mais claro para o subtítulo */
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btnPrimary,
+.btnSecondary {
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btnPrimary {
+  background-color: var(--primary-color);
+  color: #1a1a1a;
+  border: 2px solid var(--primary-color);
+}
+
+.btnPrimary:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+}
+
+.btnSecondary:hover {
+  background-color: var(--text-color);
+  color: #1a1a1a;
+}
